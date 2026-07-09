@@ -47,13 +47,13 @@ body{font-family:"Assistant",sans-serif;font-weight:400;background:#F5F0E8;direc
 
 /* מעגל אינטראקטיבי */
 .cycle-hint{text-align:center;font-size:13px;color:#7A5C3A;margin-bottom:8px;}
-.cycle-stage{position:relative;max-width:360px;margin:0 auto;}
+.cycle-stage{position:relative;max-width:420px;margin:0 auto;}
 svg#cycleSvg{width:100%;height:auto;display:block;overflow:visible;}
 .node{cursor:pointer;}
 .node circle.base{stroke-width:3;transition:transform .25s ease;transform-origin:center;}
 .node:hover circle.base,.node.active circle.base{transform:scale(1.08);}
 .node text{font-family:"Assistant",sans-serif;font-weight:700;text-anchor:middle;pointer-events:none;}
-.node .n-title{font-size:12.5px;fill:#3D2008;}
+.node .n-title{font-size:20px;fill:#3D2008;}
 .flow-path{fill:none;stroke-width:3;stroke-dasharray:6 8;animation:dash 3s linear infinite;opacity:.5;}
 @keyframes dash{to{stroke-dashoffset:-140;}}
 
@@ -184,31 +184,31 @@ svg#cycleSvg{width:100%;height:auto;display:block;overflow:visible;}
       <path class="flow-path" d="M 320 510 A 220 220 0 0 1 130 320" stroke="#C99A3C"/>
       <path class="flow-path" d="M 130 320 A 220 220 0 0 1 320 130" stroke="#8E7BA6"/>
 
-      <text x="320" y="312" text-anchor="middle" font-family="Fredoka One" font-size="16" fill="#5C3010">מעגל</text>
-      <text x="320" y="336" text-anchor="middle" font-family="Fredoka One" font-size="16" fill="#5C3010">הקסמים</text>
+      <text x="320" y="308" text-anchor="middle" font-family="Fredoka One" font-size="22" fill="#5C3010">מעגל</text>
+      <text x="320" y="340" text-anchor="middle" font-family="Fredoka One" font-size="22" fill="#5C3010">הקסמים</text>
 
       <g class="node" data-node="brain" transform="translate(320,110)">
-        <circle class="base" r="72" fill="#EAE3F1" stroke="#8E7BA6"/>
-        <text class="n-title" y="-6">המוח</text>
-        <text class="n-title" y="14">(בקרה)</text>
+        <circle class="base" r="84" fill="#EAE3F1" stroke="#8E7BA6"/>
+        <text class="n-title" y="-10">המוח</text>
+        <text class="n-title" y="22">(בקרה)</text>
       </g>
 
       <g class="node" data-node="lh" transform="translate(530,320)">
-        <circle class="base" r="72" fill="#F4E1D9" stroke="#C1694F"/>
-        <text class="n-title" y="-6">יותרת המוח</text>
-        <text class="n-title" y="14">(איזון הורמונלי)</text>
+        <circle class="base" r="84" fill="#F4E1D9" stroke="#C1694F"/>
+        <text class="n-title" y="-10">יותרת המוח</text>
+        <text class="n-title" y="22">(איזון הורמונלי)</text>
       </g>
 
       <g class="node" data-node="androgens" transform="translate(320,530)">
-        <circle class="base" r="72" fill="#F4E1D9" stroke="#C1694F"/>
-        <text class="n-title" y="-6">השחלה</text>
-        <text class="n-title" y="14">(הורמונים גבריים)</text>
+        <circle class="base" r="84" fill="#F4E1D9" stroke="#C1694F"/>
+        <text class="n-title" y="-10">השחלה</text>
+        <text class="n-title" y="22">(הורמונים גבריים)</text>
       </g>
 
       <g class="node" data-node="insulin" transform="translate(110,320)">
-        <circle class="base" r="72" fill="#F5EBD3" stroke="#C99A3C"/>
-        <text class="n-title" y="-6">הלבלב</text>
-        <text class="n-title" y="14">(אינסולין)</text>
+        <circle class="base" r="84" fill="#F5EBD3" stroke="#C99A3C"/>
+        <text class="n-title" y="-10">הלבלב</text>
+        <text class="n-title" y="22">(אינסולין)</text>
       </g>
     </svg>
   </div>
