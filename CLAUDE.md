@@ -10,10 +10,13 @@
 ## מבנה הפרויקט
 
 ```
-index.html            ← הכלי כולו (דף פתיח + מדריך), HTML+CSS+JS בקובץ אחד
-logo.png              ← לוגו קטן (עלה, רקע שקוף) — קרדיט בתחתית המדריך
-noam-logo-cover.png   ← "noam big logo" — הלוגו הגדול בדף הפתיח
-og-image.png          ← תמונת שיתוף לוואטסאפ/פייסבוק (זהה לכל שאר הפרויקטים, מקור: noam-barel-logo/5-social-share/og-default.png)
+index.html                      ← הכלי כולו (דף פתיח + מדריך), HTML+CSS+JS בקובץ אחד
+noam-logo-cover.png             ← "noam big logo" — משמש גם בדף הפתיח וגם בקרדיט בתחתית המדריך
+og-image.png                    ← תמונת שיתוף לוואטסאפ/פייסבוק (זהה לכל שאר הפרויקטים, מקור: noam-barel-logo/5-social-share/og-default.png)
+manifest.json                   ← PWA manifest — קובע את השם "PCOS" כשמוסיפים למסך הבית
+favicon.ico / favicon-16x16.png / favicon-32x32.png / apple-touch-icon.png / android-chrome-192x192.png / android-chrome-512x512.png
+                                 ← זהים לחלוטין לקבצי האייקון של clinic-skills (Skills List) — הועתקו משם בכוונה לשמירה על אחידות
+logo.png                        ← לוגו ישן (עלה, רקע שקוף) — לא בשימוש יותר בדף, נשאר בריפו להיסטוריה בלבד
 ```
 
 קובץ HTML סטטי יחיד — ללא build step, ללא תלויות חיצוניות. הגופנים (Fredoka One, Assistant) מוטמעים כ-base64 בתוך `<style>`.
@@ -39,11 +42,16 @@ og-image.png          ← תמונת שיתוף לוואטסאפ/פייסבוק 
 
 ## תגיות שיתוף (OG/WhatsApp)
 
-- `og:title` / `twitter:title`: "PCOS - מדריך אינטראקטיבי"
-- `og:description` / `twitter:description`: "כל מה שאת צריכה לדעת ב-10 דקות"
+- `og:title` / `twitter:title`: "המדריך האינטרקטיבי ל-PCOS"
+- `og:description` / `twitter:description`: "כל מה שאת צריכה לדעת על תסמונת השחלות הפוליציסטיות"
 - `og:image` / `twitter:image`: `og-image.png` (חייב להישאר קובץ אמיתי בשורש הריפו — WhatsApp/Facebook לא טוענים base64/data URIs)
 
 אם משתנה הכותרת/התיאור של המדריך — לעדכן גם את `<title>` בראש הקובץ וגם את תגיות ה-OG, לשמור עליהם מסונכרנים.
+
+## הוספה למסך הבית (PWA)
+
+- `manifest.json` (`short_name: "PCOS"`) + `apple-mobile-web-app-title` + `application-name` — קובעים שהשם שמוצע כברירת מחדל כשמוסיפים את הדף למסך הבית (iOS/Android) הוא "PCOS", גם אם כותרת הטאב בדפדפן ארוכה יותר.
+- האייקון שמוצג הוא `apple-touch-icon.png`/`android-chrome-*.png` — אותם קבצים בדיוק כמו ב-clinic-skills (Skills List) ו-NB Clinic App.
 
 ---
 
